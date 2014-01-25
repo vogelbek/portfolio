@@ -2,9 +2,9 @@
 # http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
 one:
-  title: MyString
-  body: MyString
+  title: Intro
+  body: All blogs have a first entry
 
 two:
-  title: MyString
-  body: MyString
+  title: More
+  body: Hopefully they get better
