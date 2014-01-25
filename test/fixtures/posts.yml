@@ -1,0 +1,10 @@
+# Read about fixtures at
+# http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  title: Intro
+  body: All blogs have a first entry
+
+two:
+  title: More
+  body: Hopefully they get better
