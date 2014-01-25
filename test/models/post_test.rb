@@ -1,11 +1,11 @@
 require "test_helper"
 
-describe Posts do
+describe Post do
   before do
-    @posts = Posts.new
+    @post = Post.new
   end
 
   it "must be valid" do
-    @posts.valid?.must_equal true
+    @post.valid?.must_equal true
   end
 end
