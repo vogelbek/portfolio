@@ -8,6 +8,8 @@ class PostsController < ApplicationController
   end
 
   def create
-    @post = Post.new params[:post]
+    @post = Post.create params[:post].permit(:title, :body)
+
+    redirect_to posts_path
   end
 end
