@@ -4,3 +4,4 @@
 <p>
   <%= post.body %>
 </p>
+<%= link_to "Edit #{post.title}", post_edit_path(id: post.id) %>
