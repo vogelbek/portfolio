@@ -9,6 +9,6 @@ feature "CreatePost" do
 
     click_on 'Create'
 
-    page.must_have_content posts(:one)
+    page.must_have_content posts(:one).title
   end
 end
