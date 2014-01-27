@@ -2,7 +2,7 @@ Portfolio::Application.routes.draw do
   get 'posts', to: 'posts#index'
   get 'posts/new', to: 'posts#new'
   post 'posts', to: 'posts#create'
-  get 'posts/:id', to: 'posts#edit'
+  get 'posts/:id', to: 'posts#edit', as: 'post_edit'
   put 'posts/:id', to: 'posts#update', as: 'post'
 
   # The priority is based upon order of creation: first created -> highest priority.
