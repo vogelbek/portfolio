@@ -1,5 +1,8 @@
 Portfolio::Application.routes.draw do
   get 'posts' => 'posts#index'
+  get 'posts/new' => 'posts#new'
+  post 'posts' => 'posts#create'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
