@@ -2,7 +2,6 @@
 before_install:
   - gem update --system
   - gem --version
-  - ruby gemfiles/minitest_tu_shim.rb
 language: ruby
 notifications:
   email:
