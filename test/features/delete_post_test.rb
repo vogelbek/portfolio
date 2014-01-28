@@ -7,6 +7,6 @@ feature "DeletePost" do
 
     click_on "Delete #{posts(:one).title}"
 
-    page.must_not_have_content posts(:one).body
+    page.wont_have_content posts(:one).body
   end
 end
