@@ -13,4 +13,12 @@ feature 'EditPost' do
 
     page.must_have_content @update_content
   end
+
+  scenario 'I can go back to posts index' do
+    visit post_path(id: posts(:one).id)
+
+    click_on 'Return to Posts'
+
+    page.must_have_content posts(:two).title
+  end
 end
