@@ -1,17 +1,18 @@
-<%= form_for @post do |post| %>
+<div class = 'small-8 small-offset-2 columns'>
+  <%= form_for @post do |post| %>
 
-  <div>
-    <%= post.label :title %>
-    <%= post.text_field :title %>
-  </div>
+    <div>
+      <%= post.label :title %>
+      <%= post.text_field :title %>
+    </div>
 
-  <div>
-    <%= post.label :body %>
-    <%= post.text_area :body %>
-  </div>
+    <div>
+      <%= post.label :body %>
+      <%= post.text_area :body %>
+    </div>
 
-  <div>
-    <%= post.submit %>
-  </div>
+    <div>
+      <%= post.submit %>
+    </div>
 
-<% end %>
+  <% end %>
