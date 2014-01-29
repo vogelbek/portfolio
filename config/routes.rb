@@ -1,10 +1,10 @@
 Portfolio::Application.routes.draw do
   get 'posts', to: 'posts#index'
-  get 'posts/new', to: 'posts#new'
   post 'posts', to: 'posts#create'
-  get 'posts/:id', to: 'posts#edit', as: 'post_edit'
-  patch 'posts/:id', to: 'posts#update', as: 'post'
-  delete 'posts/:id', to: 'posts#destroy', as: 'post_delete'
+  get 'posts/new', to: 'posts#new'
+  get 'post/:id', to: 'posts#edit', as: :post
+  patch 'post/:id', to: 'posts#update'
+  delete 'post/:id', to: 'posts#destroy'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
