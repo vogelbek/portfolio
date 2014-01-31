@@ -1,1 +1,8 @@
 <h1> Adam Hendricksen </h1>
+
+<% @posts.each do |post| %>
+  <h2>
+    <%= link_to post.title,
+        posts_path(anchor: post.id) %>
+  </h2>
+<% end %>
