@@ -6,6 +6,7 @@ group :test do
 end
 
 group :development, :test do
+  gem 'rails_12factor'
   gem 'sqlite3'
 end
 
