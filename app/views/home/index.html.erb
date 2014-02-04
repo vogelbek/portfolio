@@ -1,8 +1,14 @@
-<h1> Adam Hendricksen </h1>
+<div class = 'row'>
+  <div class = 'small-12'>
+    <h1 class = 'header'> Adam Hendricksen </h1>
+  </div>
+  <div class = 'small-12'>
+    <h3 class = 'subheader'> Recent blog posts </h3>
+  </div>
+  <% @posts.each do |post| %>
+    <div class = 'small-12'>
+      <%= link_to post.title, posts_path(anchor: post.id) %>
+    </div>
+  <% end %>
 
-<% @posts.each do |post| %>
-  <h2>
-    <%= link_to post.title,
-        posts_path(anchor: post.id) %>
-  </h2>
-<% end %>
+</div>
