@@ -1,11 +1,11 @@
-<div class = 'row'>
-  <div class = 'small-8 small-offset-2 columns'>
+<section class = 'blog'>
+  <header>
     <h1>Edit <%= @post.title %></h1>
-  </div>
+  </header>
 
   <%= render 'form' %>
 
-  <div class = 'small-8 small-offset-2 columns'>
-    <%= link_to 'Return to Posts', posts_path, method: :get %>
-  </div>
-</div>
+  <section class = 'controls'>
+    <%= link_to 'Return to Posts', posts_path, method: :get, class: 'control' %>
+  </section>
+</section>
