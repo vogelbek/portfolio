@@ -1,5 +1,5 @@
-<% @posts.each do |post| %>
-  <div class = 'row'>
+<section class = 'blog'>
+  <% @posts.each do |post| %>
     <%= render 'blog_post', post: post %>
-  </div>
-<% end %>
+  <% end %>
+</section>

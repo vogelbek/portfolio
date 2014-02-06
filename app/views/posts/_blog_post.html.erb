@@ -1,11 +1,13 @@
-<article id = <%= post.id %> class = 'small-12 columns'>
+<article id = <%= post.id %>>
   <h1>
     <%= post.title %>
   </h1>
   <p>
     <%= post.body %>
   </p>
-  <%= link_to "Edit #{post.title}", post_path(id: post.id), method: :get %>
+  <section class = 'controls'>
+    <%= link_to "Edit #{post.title}", post_path(id: post.id), method: :get, class: 'control' %>
 
-  <%= link_to "Delete #{post.title}", post_path(id: post.id), method: :delete %>
+    <%= link_to "Delete #{post.title}", post_path(id: post.id), method: :delete, class: 'control' %>
+  </section>
 </article>
