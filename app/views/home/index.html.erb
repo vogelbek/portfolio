@@ -1,14 +1,15 @@
-<div class = 'row'>
-  <div class = 'small-12'>
+<section class = 'introduction'>
+  <header>
     <h1 class = 'header'> Adam Hendricksen </h1>
-  </div>
-  <div class = 'small-12'>
+  </header>
+</section>
+<section class = 'recent_blogs'>
+  <header>
     <h3 class = 'subheader'> Recent blog posts </h3>
-  </div>
+  </header>
   <% @posts.each do |post| %>
-    <div class = 'small-12'>
+    <article class = 'thumbnail'>
       <%= link_to post.title, posts_path(anchor: post.id) %>
-    </div>
+    </article>
   <% end %>
-
-</div>
+</section>
