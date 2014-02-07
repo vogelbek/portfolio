@@ -6,8 +6,8 @@
     <%= post.body %>
   </p>
   <section class = 'controls'>
-    <%= link_to 'Edit', post_path(id: post.id), method: :get, id: "Edit_#{post.id}", class: 'control' %>
+    <%= link_to 'Edit', post_path(id: post.id), method: :get, id: "edit_#{post.id}", class: 'control' %>
 
-    <%= link_to 'Delete', post_path(id: post.id), method: :delete, id: "Delete_#{post.id}", class: 'control' %>
+    <%= link_to 'Delete', post_path(id: post.id), method: :delete, id: "delete_#{post.id}", class: 'control' %>
   </section>
 </article>

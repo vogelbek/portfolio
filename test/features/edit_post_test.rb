@@ -5,7 +5,7 @@ feature 'EditPost' do
     @update_content = 'Entirely New Content'
     visit posts_path
 
-    find("#Edit_#{posts(:one).id}", text: 'Edit').click
+    find("#edit_#{posts(:one).id}", text: 'Edit').click
 
     fill_in 'Title', with: @update_content
 
