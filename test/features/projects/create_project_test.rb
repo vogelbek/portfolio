@@ -1,8 +1,11 @@
 require 'test_helper'
 
 feature 'CreateProject' do
+  before :all do
+    @new_path = '/projects/new'
+  end
   scenario 'Create a new project' do
-    visit '/projects/new'
+    visit @new_path
 
     fill_in 'Description', with: projects(:one).description
 
@@ -12,7 +15,7 @@ feature 'CreateProject' do
   end
 
   scenario 'Cant create without Description' do
-    visit '/projects/new'
+    visit @new_path
 
     fill_in 'Description', with: ''
 
