@@ -1,4 +1,7 @@
 Portfolio::Application.routes.draw do
+  root 'home#index'
+
+  #Posts do not have a show route
   get 'posts', to: 'posts#index'
   post 'posts', to: 'posts#create'
   get 'posts/new', to: 'posts#new'
@@ -6,10 +9,12 @@ Portfolio::Application.routes.draw do
   patch 'post/:id', to: 'posts#update'
   delete 'post/:id', to: 'posts#destroy'
 
+  resources :projects
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
-  root 'home#index'
+
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

@@ -1,7 +1,7 @@
-require "test_helper"
+require 'test_helper'
 
-feature "DeletePost" do
-  scenario "a post can be deleted" do
+feature 'DeletePost' do
+  scenario 'a post can be deleted' do
     visit posts_path
     page.must_have_content posts(:one).title
 

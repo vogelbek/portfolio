@@ -3,13 +3,23 @@
     <h1 class = 'header'> Adam Hendricksen </h1>
   </header>
 </section>
-<section class = 'recent_blogs'>
+<section class = 'promoted'>
   <header>
     <h3 class = 'subheader'> Recent blog posts </h3>
   </header>
   <% @posts.each do |post| %>
     <article class = 'thumbnail'>
       <%= link_to post.title, posts_path(anchor: post.id) %>
+    </article>
+  <% end %>
+</section>
+<section class = 'promoted'>
+  <header>
+    <h3 class = 'subheader'> Projects I've worked on </h3>
+  </header>
+  <% @projects.each do |project| %>
+    <article class = 'thumbnail'>
+      <%= link_to project.description, project_path(id: project.id) %>
     </article>
   <% end %>
 </section>

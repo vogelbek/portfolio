@@ -1,11 +1,10 @@
 <section class = 'articles'>
   <header>
-    <h1>Edit <%= @post.title %></h1>
+    <h1>Create a new project</h1>
   </header>
-
   <%= render 'form' %>
 
   <section class = 'controls'>
-    <%= link_to 'Return to Posts', posts_path, method: :get, class: 'control' %>
+    <%= link_to 'Return to projects', projects_path, class: 'control' %>
   </section>
 </section>
