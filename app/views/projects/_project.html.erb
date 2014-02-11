@@ -1,0 +1,10 @@
+<article id = <%= project.id %>>
+  <h1>
+    <%= project.description %>
+  </h1>
+  <section class = 'controls'>
+    <%= link_to "Edit", project_path(id: project.id), method: :get, id: "#{project.id}", class: 'control' %>
+
+    <%= link_to "Delete", project_path(id: project.id), method: :delete, id: "#{project.id}", class: 'control' %>
+  </section>
+</article>

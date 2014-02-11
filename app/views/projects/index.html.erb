@@ -1,0 +1,6 @@
+<section class = 'blog'>
+  <h1>Projects I've Worked On</h1>
+  <% @projects.each do |project| %>
+    <%= render 'project', project: project %>
+  <% end %>
+</section>
