@@ -1,7 +1,7 @@
-require "test_helper"
+require 'test_helper'
 
-feature "CreatePost" do
-  scenario "create a new post" do
+feature 'CreatePost' do
+  scenario 'create a new post' do
     visit posts_new_path
 
     fill_in 'Title', with: posts(:one).title

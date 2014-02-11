@@ -1,7 +1,7 @@
-require "test_helper"
+require 'test_helper'
 
-feature "CreateProject" do
-  scenario "Create a new project" do
+feature 'CreateProject' do
+  scenario 'Create a new project' do
     visit '/projects/new'
 
     fill_in 'Description', with: projects(:one).description
