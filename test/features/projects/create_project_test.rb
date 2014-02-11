@@ -19,6 +19,6 @@ feature 'CreateProject' do
 
     fill_in 'Description', with: ''
 
-    current_path.must_equal '/projects/new'
+    current_path.must_equal @new_path
   end
 end
