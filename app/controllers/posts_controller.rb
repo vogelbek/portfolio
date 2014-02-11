@@ -10,7 +10,11 @@ class PostsController < ApplicationController
   def create
     @post = Post.create params[:post].permit(:title, :body)
 
-    redirect_to posts_path
+    if @post.save
+      redirect_to posts_path
+    else
+      redirect_to posts_new_path
+    end
   end
 
   def edit
@@ -21,7 +25,11 @@ class PostsController < ApplicationController
     @post = Post.find params[:id]
     @post.update_attributes params[:post].permit(:title, :body)
 
-    redirect_to posts_path
+    if @post.save
+      redirect_to posts_path
+    else
+      redirect_to posts_new_path
+    end
   end
 
   def destroy
