@@ -13,3 +13,13 @@
     </article>
   <% end %>
 </section>
+<section class = 'projects'>
+  <header>
+    <h3 class = 'subheader'> Projects I've worked on </h3>
+  </header>
+  <% @projects.each do |project| %>
+    <article class = 'thumbnail'>
+      <%= link_to project.description, project_path(id: project.id) %>
+    </article>
+  <% end %>
+</section>

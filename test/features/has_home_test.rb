@@ -19,4 +19,19 @@ class HasHomeTest < Capybara::Rails::TestCase
 
     page.must_have_content posts(:two).body
   end
+
+  test "Root has project descriptions" do
+    visit root_path
+
+    page.must_have_content projects(:one).description
+  end
+
+  test "Root's projects are show links" do
+    visit root_path
+
+    click_on projects(:two).description
+
+    page.must_have_content projects(:two).description
+    current_path.must_equal project_path(id: projects(:two).id)
+  end
 end
