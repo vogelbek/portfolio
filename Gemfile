@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+gem 'devise'
+
 gem 'minitest-rails'
 group :test do
   gem 'minitest-rails-capybara'

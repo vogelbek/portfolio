@@ -7,6 +7,8 @@ feature 'EditPost' do
 
     find("#edit_#{posts(:one).id}", text: 'Edit').click
 
+    login
+
     fill_in 'Title', with: @update_content
 
     click_on 'Update'
@@ -16,6 +18,8 @@ feature 'EditPost' do
 
   scenario 'I can go back to posts index' do
     visit post_path(id: posts(:one).id)
+
+    login
 
     click_on 'Return to Posts'
 
