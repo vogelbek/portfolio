@@ -7,6 +7,8 @@ feature 'DeletePost' do
 
     find("#delete_#{posts(:one).id}", text: 'Delete').click
 
+    login
+
     page.wont_have_content posts(:one).body
   end
 end

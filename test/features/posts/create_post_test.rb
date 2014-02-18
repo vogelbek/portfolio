@@ -4,6 +4,10 @@ feature 'CreatePost' do
   scenario 'create a new post' do
     visit posts_new_path
 
+    login
+
+    puts page.body
+
     fill_in 'Title', with: posts(:one).title
     fill_in 'Body', with: posts(:one).body
 
@@ -15,6 +19,8 @@ feature 'CreatePost' do
   scenario 'validate post title' do
     visit posts_new_path
 
+    login
+
     fill_in 'Title', with: ''
     fill_in 'Body', with: posts(:one).body
 
@@ -25,6 +31,8 @@ feature 'CreatePost' do
 
   scenario 'validate post body' do
     visit posts_new_path
+
+    login
 
     fill_in 'Title', with: posts(:one).title
     fill_in 'Body', with: ''

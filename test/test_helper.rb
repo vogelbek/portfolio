@@ -9,5 +9,10 @@ class ActiveSupport::TestCase
   # Setup all fixtures in test/fixtures/*.(yml|csv) for all tests in alphabetical order.
   fixtures :all
 
-  # Add more helper methods to be used by all tests here...
+  def login
+    fill_in 'Email', with: admin(:one).email
+    fill_in 'Password', with: 'practicePasswordTest'
+
+    click_on 'Sign in'
+  end
 end
