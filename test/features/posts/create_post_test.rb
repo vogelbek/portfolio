@@ -6,8 +6,6 @@ feature 'CreatePost' do
 
     login
 
-    puts page.body
-
     fill_in 'Title', with: posts(:one).title
     fill_in 'Body', with: posts(:one).body
 
