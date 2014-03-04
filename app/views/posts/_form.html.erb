@@ -10,10 +10,12 @@
     <%= post.text_area :body %>
   </div>
 
-  <div>
-    <%= post.label :published %>
-    <%= post.check_box :published %>
-  </div>
+  <% if @policy.publish? %>
+    <div>
+      <%= post.label :published %>
+      <%= post.check_box :published %>
+    </div>
+  <% end %>
 
   <div>
     <%= post.submit %>
