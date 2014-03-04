@@ -10,7 +10,7 @@ class PostsController < ApplicationController
   end
 
   def create
-    @post = Post.create params[:post].permit(:title, :body)
+    @post = Post.create params[:post].permit(:title, :body, (:published if current_admin.role == 'editor'))
 
     if @post.save
       redirect_to posts_path
@@ -25,7 +25,7 @@ class PostsController < ApplicationController
 
   def update
     @post = Post.find params[:id]
-    @post.update_attributes params[:post].permit(:title, :body)
+    @post.update_attributes params[:post].permit(:title, :body, (:published if current_admin.role == 'editor'))
 
     if @post.save
       redirect_to posts_path

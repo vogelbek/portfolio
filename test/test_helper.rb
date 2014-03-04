@@ -9,9 +9,10 @@ class ActiveSupport::TestCase
   # Setup all fixtures in test/fixtures/*.(yml|csv) for all tests in alphabetical order.
   fixtures :all
 
-  def login
-    fill_in 'Email', with: admin(:one).email
-    fill_in 'Password', with: 'practicePasswordTest'
+  def login role = :editor
+    visit new_admin_session_path
+    fill_in 'Email', with: admin(role).email
+    fill_in 'Password', with: 'password'
 
     click_on 'Sign in'
   end

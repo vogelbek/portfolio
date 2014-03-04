@@ -1,3 +1,14 @@
 one:
   email: test@visionarychin.com
   encrypted_password: <%= Admin.new.send :password_digest, 'practicePasswordTest' %>
+  role: author
+
+author:
+  email: author@visionarychin.com
+  encrypted_password: <%= Admin.new.send(:password_digest, 'password') %>
+  role: author
+
+editor:
+  email: editor@visionarychin.com
+  encrypted_password: <%= Admin.new.send(:password_digest, 'password') %>
+  role: editor

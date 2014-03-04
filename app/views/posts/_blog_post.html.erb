@@ -1,8 +1,11 @@
-<article id = <%= post.id %>>
+<article id = <%= post.id %> >
   <h1>
     <%= post.title %>
   </h1>
   <p>
+    <% if post.published %>
+      <span> Published </span>
+    <% end %>
     <%= post.body %>
   </p>
   <section class = 'controls'>
