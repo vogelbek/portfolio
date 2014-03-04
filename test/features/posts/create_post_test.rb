@@ -39,4 +39,48 @@ feature 'CreatePost' do
 
     current_path.must_equal posts_new_path
   end
+
+  scenario "unauthenticated site visitors cannot visit new_post_path" do
+    visit posts_new_path
+    page.must_have_content "You need to sign in or sign up before continuing"
+  end
+
+  scenario "unauthenticated site vistiors cannot see new post button" do
+    # When I visit the blog index page
+    visit posts_path
+    # Then I should not see the "New Post" button
+    page.wont_have_link "New Post"
+  end
+
+  scenario "authors can't publish" do
+    # Given an author's account
+    login(:author)
+
+    # When I visit the new page
+    visit posts_new_path
+
+    # There is no checkbox for published
+    page.wont_have_field('published')
+  end
+
+  scenario "editors can publish" do
+    # Given an editor's account
+    login(:editor)
+
+    # When I visit the new page
+    visit posts_new_path
+
+    # There is a checkbox for published
+    page.must_have_field('Published')
+
+    # When I submit the form
+    fill_in "Title", with: posts(:one).title
+    fill_in "Body", with: posts(:one).body
+    check "Published"
+    click_on "Create Post"
+
+    # Then the published post should be shown
+    page.text.must_include "Published"
+  end
 end
+
