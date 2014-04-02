@@ -1,6 +1,16 @@
 # README
 This rails project is intended to become a developer's portfolio at the end of the quarter as part of the University of Washington Ruby Certificate course. Please stay tuned for future awesomeness.
 
+## Setup
+
+`git clone https://github.com/vogelbek/portfolio.git`
+
+`bundle install`
+
+`rake db:migrate`
+
+`rails server`
+
 ## Testing
 
 The current CI status of this project is:
