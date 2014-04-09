@@ -6,11 +6,11 @@ class Admin < ActiveRecord::Base
          :omniauthable
 
   def self.from_omniauth(auth)
-    where(auth.slice(:provider, :uid)).first_or_create do |admin|
-      admin.provider = auth.provider
-      admin.uid = auth.uid
-      admin.name = auth.info.nickname
-      admin.email = "#{admin.name}-CHANGEME@twitter.example.com"
+    where(auth.slice(:provider, :uid)).first_or_create do |user|
+      user.provider = auth.provider
+      user.uid = auth.uid
+      user.name = auth.info.nickname
+      user.email = "#{user.name}-CHANGEME@twitter.example.com"
     end
   end
 
