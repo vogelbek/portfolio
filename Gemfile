@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'devise'
+gem 'omniauth-twitter'
 
 gem 'minitest-rails'
 group :test do
