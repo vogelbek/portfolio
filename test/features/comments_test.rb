@@ -6,6 +6,7 @@ feature 'Project comments' do
     page.must_have_content comments(:one).comment
     page.must_have_content comments(:two).tldr
     page.wont_have_content comments(:three).comment
+    page.wont_have_content comments(:four).comment
   end
   scenario 'Projects without comments should not have empty braces' do
     visit project_path 2

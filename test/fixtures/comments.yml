@@ -16,3 +16,9 @@ three:
   comment: 'Should not be in Project 1'
   commentable_id: 3
   commentable_type: 'Project'
+four:
+  id: 4
+  tldr: 'For Post 1'
+  comment: 'Should not be seen in Projects!'
+  commentable_id: 1
+  commentable_type: 'Post'
