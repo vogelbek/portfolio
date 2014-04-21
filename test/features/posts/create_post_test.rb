@@ -2,7 +2,7 @@ require 'test_helper'
 
 feature 'CreatePost' do
   scenario 'create a new post' do
-    visit posts_new_path
+    visit new_post_path
 
     login
 
@@ -15,7 +15,7 @@ feature 'CreatePost' do
   end
 
   scenario 'validate post title' do
-    visit posts_new_path
+    visit new_post_path
 
     login
 
@@ -24,11 +24,11 @@ feature 'CreatePost' do
 
     click_on 'Create'
 
-    current_path.must_equal posts_new_path
+    current_path.must_equal new_post_path
   end
 
   scenario 'validate post body' do
-    visit posts_new_path
+    visit new_post_path
 
     login
 
@@ -37,11 +37,11 @@ feature 'CreatePost' do
 
     click_on 'Create'
 
-    current_path.must_equal posts_new_path
+    current_path.must_equal new_post_path
   end
 
   scenario "unauthenticated site visitors cannot visit new_post_path" do
-    visit posts_new_path
+    visit new_post_path
     page.must_have_content "You need to sign in or sign up before continuing"
   end
 
@@ -57,7 +57,7 @@ feature 'CreatePost' do
     login(:author)
 
     # When I visit the new page
-    visit posts_new_path
+    visit new_post_path
 
     # There is no checkbox for published
     page.wont_have_field('published')
@@ -68,7 +68,7 @@ feature 'CreatePost' do
     login(:editor)
 
     # When I visit the new page
-    visit posts_new_path
+    visit new_post_path
 
     # There is a checkbox for published
     page.must_have_field('Published')

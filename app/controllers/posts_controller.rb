@@ -17,7 +17,7 @@ class PostsController < ApplicationController
     if @post.save
       redirect_to posts_path
     else
-      redirect_to posts_new_path
+      redirect_to new_post_path
     end
   end
 
@@ -32,7 +32,7 @@ class PostsController < ApplicationController
     if @post.save
       redirect_to posts_path
     else
-      redirect_to posts_new_path
+      redirect_to new_post_path
     end
   end
 

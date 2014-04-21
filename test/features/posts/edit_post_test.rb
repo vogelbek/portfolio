@@ -17,7 +17,7 @@ feature 'EditPost' do
   end
 
   scenario 'I can go back to posts index' do
-    visit post_path(id: posts(:one).id)
+    visit edit_post_path posts(:one).id
 
     login
 

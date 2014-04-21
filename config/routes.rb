@@ -3,12 +3,7 @@ Portfolio::Application.routes.draw do
   root 'home#index'
 
   #Posts do not have a show route
-  get 'posts', to: 'posts#index'
-  post 'posts', to: 'posts#create'
-  get 'posts/new', to: 'posts#new'
-  get 'post/:id', to: 'posts#edit', as: :post
-  patch 'post/:id', to: 'posts#update'
-  delete 'post/:id', to: 'posts#destroy'
+  resources :posts
 
   resources :projects
 
