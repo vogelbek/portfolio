@@ -1,7 +1,8 @@
-<article id = <%= project.id %>>
+<article id = '<%= project.id %>'>
   <h1>
     <%= link_to project.description, project_path(id: project.id) %>
   </h1>
+  <%= render 'comments/comments_index', comments: project.comments %>
   <section class = 'controls'>
     <%= link_to "Edit", project_path(id: project.id), method: :get, id: "#{project.id}", class: 'control' %>
 

@@ -3,9 +3,13 @@ Portfolio::Application.routes.draw do
   root 'home#index'
 
   #Posts do not have a show route
-  resources :posts
+  resources :posts do
+    resources :comments
+  end
 
-  resources :projects
+  resources :projects do
+    resources :comments
+  end
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

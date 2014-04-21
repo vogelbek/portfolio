@@ -1,0 +1,12 @@
+one:
+  id: 1
+  tldr: 'This is short'
+  comment: 'This could be quite long'
+  commentable_id: 1
+  commentable_type: 'Project'
+two:
+  id: 2
+  tldr: 'Another pithy entry'
+  comment: 'Bam Okay Okay'
+  commentable_id: 1
+  commentable_type: 'Project'
