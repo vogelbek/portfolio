@@ -10,3 +10,9 @@ two:
   comment: 'Bam Okay Okay'
   commentable_id: 1
   commentable_type: 'Project'
+three:
+  id: 3
+  tldr: 'For Project 3'
+  comment: 'Should not be in Project 1'
+  commentable_id: 3
+  commentable_type: 'Project'
