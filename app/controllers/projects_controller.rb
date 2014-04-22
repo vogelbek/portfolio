@@ -13,8 +13,18 @@ class ProjectsController < ApplicationController
 
   def create
     @project = Project.create params[:project].permit(:description)
+    respond_to do |format|
+      format.html do
+        redirect_to projects_path
+      end
+      format.js do
+        unless @project.save
+          render text:  @project.errors.full_messages.join,
+                        status: :unprocessable_entity
 
-    redirect_to projects_path
+        end
+      end
+    end
   end
 
   def destroy
