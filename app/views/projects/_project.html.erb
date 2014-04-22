@@ -3,6 +3,7 @@
     <%= link_to project.description, project_path(id: project.id) %>
   </h1>
   <%= render 'comments/comments_index', comments: project.comments %>
+  <%= link_to 'Add a Comment', new_project_comment_path(project.id) %>
   <section class = 'controls'>
     <%= link_to "Edit", project_path(id: project.id), method: :get, id: "#{project.id}", class: 'control' %>
 

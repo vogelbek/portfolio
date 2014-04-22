@@ -10,7 +10,6 @@ Portfolio::Application.routes.draw do
   resources :projects do
     resources :comments
   end
-  get '/comment/new' => 'comment#new', as: :new_comment
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

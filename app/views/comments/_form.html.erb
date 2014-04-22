@@ -1,0 +1,13 @@
+<%= form_for [@commentable, @comment] do |comment| %>
+  <div>
+    <%= comment.label :tldr, "TLDR" %>
+    <%= comment.text_field :tldr %>
+  </div>
+  <div>
+    <%= comment.label :comment %>
+    <%= comment.text_field :comment %>
+  </div>
+  <div>
+    <%= comment.submit %>
+  </div>
+<% end %>

@@ -20,6 +20,7 @@ feature 'Project comments' do
     click_on 'Add a Comment'
     fill_in 'TLDR', with: @tldr
     fill_in 'Comment', with: @comment
+    click_on 'Create Comment'
     page.must_have_content @tldr
   end
 end
