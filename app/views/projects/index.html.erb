@@ -6,3 +6,6 @@
     <%= render 'project', project: project %>
   <% end %>
 </section>
+<section class = 'controls'>
+  <%= link_to 'Add a Project', new_project_path, remote: true, id: :new_link %>
+</section>
