@@ -13,4 +13,13 @@ feature 'Project comments' do
     page.wont_have_content comments(:one).comment
     page.wont_have_content '[]'
   end
+  scenario 'Create a comment' do
+    @tldr = 'A test tldr'
+    @comment = 'A test comment text'
+    visit project_path 2
+    click_on 'Add a Comment'
+    fill_in 'TLDR', with: @tldr
+    fill_in 'Comment', with: @comment
+    page.must_have_content @tldr
+  end
 end
